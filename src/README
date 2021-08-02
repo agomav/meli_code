@@ -1,0 +1,44 @@
+DESAFIO TEORICO:
+
+CASO DE UDO CORRUTINAS:
+
+Si en los lenguajes en los que esté trabajando están disponibles. Las usaría por ejemplo para  controlar la escritura
+de recursos ante una carga concurente. Supongamos un API REST recibiendo carga o muchas peticiones concurrentes que escriben en base de datos.
+Con las corrutines se puede hacer el schedule de la escritura ejecutando las corrutinas de forma ordenana sin afectar la integridad e la BD
+Las corutinas son soportadas en lenguajes como LUA, el cual es usado para la creación de videojuegos, allí, por ejemplo, vemos la necesidad de
+ejecutar o correr metodos de forma 'colaborativa', esto significa que el método caller puede obtener tareas el metodo target 
+
+CASO DE USO THREADS:
+
+Siempre que tenga una tarea que tiene muchas predecesoras y estas no depnden la una de la otra. O en general, cuando pueden correr de forma
+independiente. Por ejemplo llamados a APIs sin dependencia entre ellas, o en una app movil de juegos con distintos elementos haciendo cad auno
+algo diferente. Aun cuando los hilos son independientes, pueden tener en comun su salida mediante colas y esto provee una interfaz fácil
+para lectura de datos.
+
+CASO DE USO PROCESS:
+
+si puedo tener absoluta independencia a nivel de memoria y cpu, es una fran opción. Los procesos o istancias permiten sacar a relucir un
+atributo de caldad muy importante como lo es la escalabilidad. Siempre que los servicios sean sin estado, es una buena opción. Que no haya
+dependencia entre los procesos
+
+
+Optimizacion recusos sist. operativo:
+
+
+Para hacer un millón de llamados a API https, teniendo en cuenta que  cada recurso es independiente, en primera insancia la respuesta puede
+ser hlos. Crear  un pool de hilos de acuerdo a las caracteristicas de sist operativo y hardaware que puedan paralelizar las areas una  buena opción.
+
+Sin embargo, se puede mejorar la eficiencia y tiempo con el uso de librerías que soporten peticiones asincronicas como aiohttp/asyncio en PYTHON.
+
+el número apropiado de hilos depende del servidor donde corre la aplicación. La coexistencia cn otras aplicaciones , etc. El cálculo se hacercon parámetros como elproducto de:
+
+Thread(s) per core, Core(s) per socket,Socket(s):
+
+
+
+
+
+
+
+
+

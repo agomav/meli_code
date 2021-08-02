@@ -1,0 +1,17 @@
+{
+    "flask_server_host":"127.0.0.1",
+    "flask_server_port":8000,
+    "file_allowed_extensions":"csv,txt",
+    "file_current_delimiter":",",
+    "me_li_app_id":"3173800196170420",
+    "me_li_auth_url_tem":"https://auth.mercadolibre.com/authorization?response_type=code&client_id={}&redirect_uri=http://localhost:8000/get_token",
+    "me_li_outh_url":"https://api.mercadolibre.com/oauth/token?grant_type=authorization_code&client_id={}&client_secret={}&code={}&redirect_uri=http://localhost:8000/get_token",
+    "me_li_secret_key":"k9c6HwYM89QP7ZiHizGRirVnurdpO5ux",
+    "me_li_req_enpoint_url":"https://api.mercadolibre.com",
+    "me_Li_item_api_endpoint":"/items/{}",
+    "me_Li_category_api_endpoint":"/categories/{}",
+    "me_Li_user_api_endpoint":"/users/{}",
+    "me_Li_currency_api_endpoint":"/currencies/{}",
+    "db_uri_connecttion":"mysql+mysqlconnector://root:Baxter2021*@localhost:3306/test_item",
+    "max_file_size": 10000000
+    }
